@@ -1,0 +1,48 @@
+<template >
+    <div class="modalBody">
+		<section role="dialog" tabindex="-1" aria-label="Generic Alert Modal" aria-describedby="alert-modal-content" class="slds-modal">
+            <div class="slds-modal__container">
+                <template if:true={title}>
+                    <header class="alert-modal__header">
+                        <div class="slds-clearfix">
+                            <div class="slds-clearfix">
+                                <div class="slds-float_left">
+                                    <div class="alert-modal__title slds-text-heading_small slds-text-align_center slds-m-top_xx-small alert-heading">
+                                        {title}
+                                    </div>
+                                </div>
+                                <div class="slds-float_right">
+                                    <button class="slds-button circle-cta" title="Close" onclick={clickCancel}>
+                                        <lightning-icon icon-name="utility:close"
+                                        alternative-text="close"
+                                        size="small" ></lightning-icon>
+                                        <span class="slds-assistive-text">Close</span>
+                                    </button>
+                                    <!--button class="slds-button circle-cta circle-cta--medium circle-cta--close-cross" title="Close" onclick={clickCancel}>
+                                        <span class="slds-assistive-text">Close</span>
+                                    </button-->
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </template>
+                <div>
+                    <div class="alert-modal__content slds-p-around_medium slds-text-align_center" id="alert-modal-content">
+                        <p class="model-body-content">{message}</p>
+                    </div>
+                    <div class="alert-modal__footer">
+                        <div class="slds-grid slds-grid_align-space slds-wrap">
+                            <div class="slds-col slds-p-horizontal_small btn-item">
+                            	<button class="slds-button slds-button--panel-inverted" onclick={clickCancel}>{textCancel}</button>
+                            </div>
+                            <div class="slds-col slds-p-horizontal_small">
+                                <button class="slds-button slds-button--panel" onclick={clickOk}>{textOk}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+        </section>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </div>
+</template>

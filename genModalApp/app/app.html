@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-p-around_x-large">
+        <h1 class="slds-text-heading_large">{state.title}</h1>
+        <div class="slds-p-around_medium"></div>
+        <p class="slds-text-heading_medium">Playground now</p>
+
+        <lightning-combobox options={options} value="supports"></lightning-combobox>
+
+        <lightning-button label='SLDS' icon-name="action:announcement">
+        </lightning-button>
+
+        <div>and</div>
+
+        <lightning-badge label="Lightning Components">
+        </lightning-badge>
+
+        <lightning-helptext content="isn't that cool?">
+        </lightning-helptext>
+
+        <!--c-gen-modal onselected={handleOnSelected} ></c-gen-modal-->
+       <c-testing-app></c-testing-app>
+    </div>
+</template>
