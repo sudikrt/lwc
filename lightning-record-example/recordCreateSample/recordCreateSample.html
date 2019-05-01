@@ -1,0 +1,30 @@
+<!--
+  @Component Name     : recordCreateSample.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 4/21/2019, 12:45:44 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    4/21/2019, 12:36:24 AM   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<template>
+    <lightning-record-edit-form object-api-name='Contact' onsuccess={handleSuccess} >
+        <lightning:messages></lightning:messages>
+
+        <div class='slds-m-around_medium'>
+            <lightning-input-field field-name="Id" value={contactId}></lightning-input-field>
+            <lightning-input-field field-name="LastName"></lightning-input-field>
+            <lightning-input-field field-name="FirstName"></lightning-input-field>
+            <lightning-input-field field-name="Email"></lightning-input-field>
+            <lightning-input-field field-name="AccountId" value={recordId}></lightning-input-field>
+            
+            <div class="slds-m-top_medium">
+                <lightning-button variant="brand" type="submit" name="save" label="Create Contact"></lightning-button>
+            </div>
+        </div>
+    </lightning-record-edit-form>
+</template>
