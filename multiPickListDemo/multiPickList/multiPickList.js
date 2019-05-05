@@ -77,6 +77,7 @@ export default class MultiPickList extends LightningElement {
         this._filterValue = '';
         this.initArray (this);
         this.updateListItems ('');
+        this.onItemSelected ();
     }
     onClearClick (event) {
         this._filterValue = '';
