@@ -1,0 +1,13 @@
+<template>
+    <li role="presentation" key={item.key} class={itemClass} id="ms-list-item" data-id={item.key} data-name={item.value} onclick={onItemSelected}>
+        <div id="listbox-option-unique-id-01"  class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+            <span class="slds-media__figure">
+                <lightning-icon icon-name="utility:check" size="x-small" alternative-text="Selected" class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small"></lightning-icon>
+            </span>
+
+            <span class="slds-media__body">
+                <span class="slds-truncate" title={item.value}>{item.value}</span>
+            </span>
+        </div>
+    </li>
+</template>
