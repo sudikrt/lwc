@@ -13,4 +13,4 @@ https://developer.salesforce.com/docs/component-library/tools/playground/qGg2WZD
 Find multiPickList component in below playground link
 
 
-https://developer.salesforce.com/docs/component-library/tools/playground/WzGAdc5hu/11/edit
+https://developer.salesforce.com/docs/component-library/tools/playground/WzGAdc5hu/
