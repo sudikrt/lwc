@@ -1,0 +1,53 @@
+<!--
+  @Component Name     : accountContactListExample.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 5/8/2019, 12:30:49 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    5/7/2019, 11:44:45 PM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title='Account Contact using for:each' icon-name="custom:custom14">
+        <ul class="slds-list_ordered">
+            <template for:each={accounts.data} for:item="eachAccount">
+                <li key={eachAccount.Id}>
+                    {eachAccount.Name}
+
+                    <ul class="slds-list_ordered">
+                        <template for:each={eachAccount.Contacts} for:item="eachContact">
+                            <li key={eachContact.Id}>
+                                {eachContact.Name}
+                            </li>
+                        </template>
+                    </ul>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+
+    <lightning-card title="Account contact using iterator" icon-name="custom:custom15">
+        <ul class="slds-list_ordered">
+            <template iterator:it={accounts.data} >
+                <li key={it.value.Id}>
+                    <div if:true={it.first} class="list-first"></div>
+                    {it.value.Name}
+                    <ul class="slds-m-around_medium">
+                        <template iterator:itc={it.value.Contacts}>
+                            <li key={itc.value.Id}>
+                                <div if:true={itc.first} class="list-first"></div>
+                                {itc.value.Name}
+                                <div if:true={itc.last} class="list-last"></div>
+                            </li>
+                        </template>
+                    </ul>
+                    <div if:true={it.last} class="list-last"></div>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
