@@ -1,0 +1,27 @@
+<!--
+  @Component Name     : lwcIdsExample.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 5/10/2019, 1:05:39 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    5/10/2019, 1:05:39 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="Lightning Data Service"  icon-name="custom:custom24">
+        <template if:true={contact.data}>
+            <div class="slds-m-around_medium content">
+                <p class="slds-m-around_medium">
+                    <lightning-button label='Take me to detail page' onclick={navigateToContact}></lightning-button>
+                </p>
+            </div>
+        </template>
+        <template if:true={contact.error}>
+            {contact.error}
+        </template>
+    </lightning-card>
+</template>
