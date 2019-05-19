@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="lookUpContainer">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+
+    <targetConfigs>   
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage">
+            <property name="sObjectApi" type="String" default="Account" label="Enter the SobjectAPI name" required="true"/>
+            <property name="limit" type="Integer" default="5" label="Number of records to be returned?" required="true"/>
+            <property name="titleField" type="String" default="" label="Enter title field API name" required="true"/>
+            <property name="subtitleField" type="String" default="" label="Enter subtitle field API name" required="true"/>
+            <property name="iconName" type="String" label="Enter the icon name" placeholder="standard:account" default=""/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

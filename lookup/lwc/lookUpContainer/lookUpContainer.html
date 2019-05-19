@@ -1,0 +1,29 @@
+<!--
+  @Component Name     : lookUpContainer.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 5/18/2019, 10:10:20 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    5/18/2019, 10:10:20 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="Sample Lookup (Lightning Web Component)">
+        <div class="slds-form slds-form_stacked slds-m-around_xx-large">
+
+            <lightning-input type="checkbox" label="Is mutli entry lookup"
+                checked={isMultiEntry} onchange={handleLookupTypeChange}></lightning-input>
+
+            <c-lookup selection={initialSelection} errors={errors}
+                onsearch={handleSearch} onselectionchange={handleSelectionChange}
+                label="Search" placeholder="Search Salesforce" is-multi-entry={isMultiEntry}>
+            </c-lookup>
+
+            <lightning-button variant="brand" label="Submit" onclick={handleSubmit}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
