@@ -1,0 +1,22 @@
+<!--
+  @Component Name     : ldsCreateRecord.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 5/21/2019, 6:46:45 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    5/20/2019, 11:26:56 PM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="LdsCreateRecord" icon-name="standard:record">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Id" data-id="accountId" value={accountId} disabled></lightning-input>
+            <lightning-input label="Name" onchange={handleNameChange} class="slds-m-bottom_x-small"></lightning-input>
+            <lightning-button label="Create Account"  variant="brand" onclick={createAccount}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
