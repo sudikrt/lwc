@@ -1,0 +1,36 @@
+<!--
+  @Component Name     : ldsDeleteRecord.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 5/22/2019, 1:27:00 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    5/22/2019, 1:27:00 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="LDS Delete Record" icon-name="standard:record">
+        <template if:true={accounts}>
+            <div class="slds-m-around_medium">
+                <template for:each={accounts} for:item="account">
+                    <lightning-layout key={account.Id} class="slds-m-vertical_x-small">
+                        <lightning-layout-item flexibility="grow" >
+                            {account.Name}
+                        </lightning-layout-item>
+                        <lightning-layout-item>
+                            <lightning-button-icon
+                                icon-name="utility:delete"
+                                onclick={deleteAccount}
+                                data-recordid={account.Id}>
+                                
+                            </lightning-button-icon>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>
