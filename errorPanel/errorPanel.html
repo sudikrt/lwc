@@ -1,0 +1,31 @@
+<!--
+  @Component Name     : errorPanel.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/3/2019, 10:36:53 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/3/2019, 10:36:53 PM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <div class="slds-p-around_medium">
+        <lightning-icon icon-name="utility:error"></lightning-icon>
+        <div class="slds-p-around_small">
+            <p>{message}</p>
+            <template if:true={errorMessages.length}>
+                <div class="slds-p-vertical_x-small">
+                    <lightning-input label="Show details" type="checkbox" onchange={handleCheckBoxChange}></lightning-input>
+                </div>
+                <template if:true={viewDetails}>
+                    <template for:each={errorMessages} for:item="eachItem">
+                        <p key={eachItem} class="error-message">{eachItem}</p>
+                    </template>
+                </template>
+            </template>
+        </div>
+    </div>
+</template>
