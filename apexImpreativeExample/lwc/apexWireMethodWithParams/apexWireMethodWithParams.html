@@ -1,0 +1,34 @@
+<!--
+  @Component Name     : apexWireMethodWithParams.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/6/2019, 12:09:07 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/6/2019, 12:09:07 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="ApexWireMethodWithParams"  icon-name="custom:custom66">
+        <div class="slds-m-around_medium">
+            <lightning-input
+            type="search"
+            onchange={handleOnChange}
+            class="slds-m-bottom_small"
+            label="Search"
+            value={searchKey}
+            ></lightning-input>
+            <template if:true={contacts.data}>
+                <template for:each={contacts.data} for:item="contact">
+                    <p key={contact.key}>{contact.Name}</p>
+                </template>
+            </template>
+            <template if:true={contacts.error}>
+                <c-error-panel errors={contacts.error}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>   
+</template>
