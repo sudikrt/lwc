@@ -1,0 +1,29 @@
+<!--
+  @Component Name     : apexStaticSchema.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/4/2019, 11:01:29 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/4/2019, 11:01:29 PM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="ApexStaticSchema" icon-name="custom:custom63">
+        <template if:true={contact.data}>
+            <div class="slds-m-around_medium">
+                <p>{name}</p>
+                <p>{title}</p>
+                <p>
+                    <lightning-formatted-email value={email}></lightning-formatted-email>
+                </p>
+            </div>
+        </template>
+        <template if:true={contact.error}>
+            <c-error-panel errors={contact.error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>
