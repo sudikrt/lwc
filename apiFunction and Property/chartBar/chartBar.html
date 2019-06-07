@@ -1,0 +1,23 @@
+<!--
+  @Component Name     : chartBar.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/7/2019, 7:52:58 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/7/2019, 7:52:38 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <div class="container">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item>{percentage}</lightning-layout-item>
+            <lightning-layout-item flexibility="grow">
+                <div class="bar" style={style}></div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

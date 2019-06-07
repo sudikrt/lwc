@@ -1,0 +1,24 @@
+<!--
+  @Component Name     : clock.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/7/2019, 12:45:40 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/7/2019, 12:45:40 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-formatted-date-time
+        value={timeStamp}
+        year="numeric"
+        month="numeric"
+        hour="2-digit"
+        minute="2-digit"
+        second="2-digit"
+        time-zone-name="short">
+    </lightning-formatted-date-time>
+</template>

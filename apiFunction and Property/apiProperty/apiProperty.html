@@ -1,0 +1,21 @@
+<!--
+  @Component Name     : apiProperty.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/7/2019, 7:46:36 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/7/2019, 7:46:36 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="apiProperty" icon-name="standard:product_consumed">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Percentage" type="number" min="0" max="100" value={percentage} onchange={handlePercentageChange}></lightning-input>
+        </div>
+    </lightning-card>
+    <c-chart-bar percentage={percentage}></c-chart-bar>
+</template>
