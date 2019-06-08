@@ -1,0 +1,31 @@
+<!--
+  @Component Name     : todoList.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/8/2019, 8:09:22 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/8/2019, 7:14:37 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <div>
+        <lightning-input type="checkbox"
+            label="Priority Only"
+            onchange={handleCheckboxChange}></lightning-input>
+
+        <ul class="slds-m-top_small">
+            <template for:each={filteredTodos} for:item="eachItem">
+                <li key={eachItem.id} >
+                    <div class="lsds-p-vertical_xx-small">
+                            <p>{eachItem.description}</p>
+                            <p>Priority: {eachItem.priority}</p>
+                    </div>
+                </li>
+            </template>
+        </ul>
+    </div>
+</template>

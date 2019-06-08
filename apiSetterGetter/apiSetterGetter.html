@@ -1,0 +1,36 @@
+<!--
+  @Component Name     : apiSetterGetter.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/8/2019, 12:49:32 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/8/2019, 12:49:32 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="apiSetterGetter" icon-name="standard:product_consumed">
+        <div class="slds-m-around_small">
+            <lightning-input
+            label="Description"
+            onchange={handleDescription}
+            value={description}></lightning-input>
+
+            <lightning-input label="Priority" 
+            type="checkbox" 
+            onchange={handlePriorityChange} 
+            checked={priority}></lightning-input>
+
+            <lightning-button 
+            label="Add Todo"
+            variant="brand"
+            onclick={handleSave}
+            class="slds-p-vertical_small"></lightning-button>
+
+            <c-todo-list todos={todos}></c-todo-list>
+        </div>
+    </lightning-card>
+</template>
