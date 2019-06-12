@@ -1,0 +1,34 @@
+<!--
+  @Component Name     : contactTile.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/11/2019, 11:04:35 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/11/2019, 11:04:35 PM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <template if:true={contact}>
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item>
+                <img src={contact.Picture__c} alt="Profile photo" />
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                    <p>{contact.Name}</p>
+                    <p>{contact.Title}</p>
+                    <p>
+                        <lightning-formatted-phone
+                            value={contact.Phone}
+                        ></lightning-formatted-phone>
+                    </p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </template>
+    <template if:false={contact}>
+        <p>No contact data available.</p>
+    </template>
+</template>

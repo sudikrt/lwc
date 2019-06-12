@@ -1,0 +1,25 @@
+<!--
+  @Component Name     : compositionIteration.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/12/2019, 7:33:10 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/12/2019, 7:33:10 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="compositionIteration" icon-name="custom:custom57">
+        <div class="slds-m-around_small">
+            <template for:each={contacts} for:item="contact">
+                    <c-contact-tile
+                    key={contact.Id}
+                    contact={contact}
+                ></c-contact-tile>
+            </template>
+        </div>
+    </lightning-card>
+</template>

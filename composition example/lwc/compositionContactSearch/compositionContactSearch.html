@@ -1,0 +1,32 @@
+<!--
+  @Component Name     : compositionContactSearch.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/12/2019, 6:39:23 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/11/2019, 11:42:24 PM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="compositionContactSearch" icon-name="custom:custom15">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search" onchange={handleSearchChange}></lightning-input>
+
+            <template if:true = {contacts}>
+                <template for:each={contacts} for:item="contact"> 
+                    <c-contact-tile
+                            key={contact.Id}
+                            contact={contact}
+                        ></c-contact-tile>
+                </template>
+            </template>
+        </div>
+        <template if:true={error}>
+            <c-error-panel errors={error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>
