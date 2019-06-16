@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="compositionWithAppBuilder">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage, lightning__HomePage,lightning__RecordPage">
+            <property name="pickListValue" type="String" datasource="Option 1, Option 2, Option 3" />
+            <property name="stringValue" type="String" placeholder="Type something here..." />
+            <property name="numberValue" type="Integer" min="0" max="100" default="10"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
