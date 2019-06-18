@@ -1,0 +1,25 @@
+<!--
+  @Component Name     : paginator.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/18/2019, 8:47:42 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/18/2019, 8:47:42 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={handlePrevious}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow">
+        </lightning-layout-item>
+        <lightning-layout-item>
+                <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right" onclick={handleNext}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>    
+</template>
