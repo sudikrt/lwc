@@ -1,0 +1,25 @@
+<!--
+  @Component Name     : contactListItemBubbling.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/18/2019, 8:22:55 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/18/2019, 8:22:55 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <a href="#" onclick={handleSelect}>
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item>
+                <img src={contact.Picture__c} alt="Profile photo" />
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <p>{contact.Name}</p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </a>
+</template>
