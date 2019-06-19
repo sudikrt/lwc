@@ -1,0 +1,30 @@
+<!--
+  @Component Name     : contactList.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/16/2019, 11:33:49 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/16/2019, 11:33:49 PM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <template for:each={contacts.data} for:item="contact">
+        <a href="#"
+            key={contact.Id}
+            data-contact-id={contact.Id}
+            onclick={handleSelect}>
+            <lightning-layout>
+                <lightning-layout-item>
+                    <img src={contact.Picture__c} alt="Profile Picture"/>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-small">
+                    <p>{contact.Name}</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </a>
+    </template>    
+</template>
