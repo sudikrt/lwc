@@ -1,0 +1,31 @@
+<!--
+  @Component Name     : navToRecord.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/22/2019, 9:20:23 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/22/2019, 9:04:13 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="navToRecord" icon-name="custom:custom78">
+        <template if:true={contact.data}>
+            <div class="slds-m-around_medium">
+                Example contact :
+                <p>{contact.data.Name}</p>
+                <p>{contact.data.Title}</p>
+            </div>
+        </template>
+        <lightning-button label="Go to contact record" class="slds-m-around_medium" onclick={handleClick}></lightning-button>
+        <lightning-button label="Go to Edit record" class="slds-m-around_medium" onclick={handleEditClick}></lightning-button>
+
+
+    <template if:true={contact.error}>
+        <c-error-panel errors={contact.error}></c-error-panel>
+    </template>
+    </lightning-card>
+</template>
