@@ -1,0 +1,27 @@
+<!--
+  @Component Name     : wireGetPicklistValuesByRecordType.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/22/2019, 12:40:16 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/22/2019, 12:09:46 PM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="wireGetPicklistValuesByRecordType" icon-name="custom:custom45">
+        <template if:true={treeModel}>
+            <lightning-layout class="slds-m-around_medium">
+                <lightning-layout-item>
+                        <lightning-tree items={treeModel} header="Account - Pick List"></lightning-tree>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+        <template if:true={error}>
+            <c-error-panel errors={error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>
