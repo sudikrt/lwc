@@ -1,0 +1,31 @@
+<!--
+  @Component Name     : wireGetObjectInfo.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/22/2019, 11:22:17 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/22/2019, 11:22:17 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="wireGetObjectInfo" icon-name="custom:custom44">
+        <div class="slds-m-around_medium">
+            <lightning-input value="Account" lable="Search" placeholder="Enter Object API Name"></lightning-input>
+            <p class="slds-p-vertical_small">
+                <lightning-button label="Get object Info" onclick={handleClick}></lightning-button>
+            </p>
+            <template if:true={objectInfo.data}>
+                <div class="scroller">
+                    {objectInfoStr}
+                </div>
+            </template>
+        </div>
+        <template if:true={objectInfo.error}>
+            <c-error-panel errors={objectInfo.error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>
