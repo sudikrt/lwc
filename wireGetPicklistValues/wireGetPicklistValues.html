@@ -1,0 +1,30 @@
+<!--
+  @Component Name     : wireGetPicklistValues.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/22/2019, 11:56:59 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/22/2019, 11:56:59 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="wireGetPicklistValues" icon-name="custom:custom67">
+        <template if:true={pickListValues.data}>
+            <div class="slds-m-around_medium">
+                <template for:each={pickListValues.data.values} for:item="item">
+                    <lightning-input key={item.value} 
+                    label={item.label} 
+                    data-value={item.value}
+                    type="checkbox"></lightning-input>
+                </template>
+            </div>
+        </template>
+        <template if:true={pickListValues.error}>
+            <c-error-panel errors={pickListValues.error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>
