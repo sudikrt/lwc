@@ -1,0 +1,27 @@
+<!--
+  @Component Name     : wireGetRecordUser.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/25/2019, 8:02:58 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/25/2019, 8:02:58 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="wireGetRecordUser" icon-name="custom:custom63">
+        <template if:true={user.data}>
+            <div class="slds-m-around_medium">
+                <p>Id : {userId}</p>
+                <p>Name : {name}</p>
+                <p><lightning-formatted-email value={email}></lightning-formatted-email></p>
+            </div>
+        </template>
+        <template if:true={user.error}>
+            <c-error-panel errors={user.error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>
