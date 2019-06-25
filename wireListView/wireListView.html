@@ -1,0 +1,29 @@
+<!--
+  @Component Name     : wireListView.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/25/2019, 8:30:01 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/25/2019, 8:30:01 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="wireListView" icon-name="custom:custom66">
+        <template if:true={listView.data}>
+            <div class="slds-m-around_small">
+                <template for:each={contacts} for:item="eachItem">
+                    <p key={eachItem.fields.Id.value}>
+                        {eachItem.fields.Name.value}
+                    </p>
+                </template>
+            </div>
+        </template>
+        <template if:true={listView.error}>
+            <c-error-panel errors={listView.error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>
