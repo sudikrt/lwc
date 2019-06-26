@@ -1,0 +1,23 @@
+<!--
+  @Component Name     : recordFormStaticContact.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/26/2019, 8:37:26 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/26/2019, 8:37:26 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="recordFormStaticContact" icon-name="standard:contact">
+        <div class="slds-m-around_small">
+            <lightning-record-form 
+                object-api-name={objectApiName}
+                record-id={recordId}
+                fields={fields}></lightning-record-form>
+        </div>
+    </lightning-card>
+</template>
