@@ -1,0 +1,32 @@
+<!--
+  @Component Name     : recordEditFormStaticContact.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 6/28/2019, 1:06:59 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/28/2019, 1:06:59 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="recordEditFormStaticContact" icon-name="standard:contact">
+        <div class="slds-m-around_small">
+            <lightning-record-edit-form object-api-name={objectApiName} record-id={recordId}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name={accountField}></lightning-input-field>
+                <lightning-input-field field-name={nameField}></lightning-input-field>
+                <lightning-input-field field-name={titleField}></lightning-input-field>
+                <lightning-input-field field-name={phoneField}></lightning-input-field>
+                <lightning-input-field field-name={emailField}></lightning-input-field>
+
+                <div class="slds-m-top_medium">
+                    <lightning-button variant="brand" type="submit" name="save" label="save"></lightning-button>
+                </div>
+
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
