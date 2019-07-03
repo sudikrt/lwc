@@ -1,0 +1,24 @@
+<!--
+  @Component Name     : miscGetUserId.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 7/3/2019, 7:57:27 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    7/3/2019, 7:57:27 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="miscGetUserId" icon-name="custom:custom20">
+        <div class="slds-m-around_medium">
+            <p>User Id</p>
+            {userId}
+        </div>
+        <c-view-source source="lwc/miscGetUserId" slot="footer">
+            Get the Id of the logged in user.
+        </c-view-source>
+    </lightning-card>
+</template>
