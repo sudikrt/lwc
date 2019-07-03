@@ -1,0 +1,35 @@
+<!--
+  @Component Name     : miscDomQuery.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 7/3/2019, 7:46:15 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    7/3/2019, 7:39:51 AM   wdt_sudikrt     Initial Version
+-->
+<template>
+    <lightning-card title="miscDomQuery" icon-name="custom:custom19">
+        <lightning-input 
+            label="Category 1"
+            type="checkbox"
+            class="slds-p-left_small"
+            onchange={oncheckboxChange}></lightning-input>
+        <lightning-input 
+            label="Category 2"
+            type="checkbox"
+            class="slds-p-left_small"
+            onchange={oncheckboxChange}></lightning-input>
+        <lightning-input 
+            label="Category 3"
+            type="checkbox"
+            class="slds-p-left_small"
+            onchange={oncheckboxChange}></lightning-input>
+        <p class="slds-m-top_small">
+            Checked items : {selectionItems}
+        </p>
+    </lightning-card>
+</template>
