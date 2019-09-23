@@ -1,0 +1,20 @@
+<!--
+  @File Name          : sampleYoutubePlayer.html
+  @Description        : 
+  @Author             : wdt_sudikrt
+  @Group              : 
+  @Last Modified By   : wdt_sudikrt
+  @Last Modified On   : 9/24/2019, 12:52:46 AM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    9/15/2019   wdt_sudikrt     Initial Version
+  https://developer.salesforce.com/blogs/2019/07/play-youtube-videos-through-lightning-web-components.html
+-->
+<template>
+    <template if:true={youtubeId}>
+        <div class="player" lwc:dom="manual"></div>
+    </template>
+    <template if:false={youtubeId}>
+        <lightning-card title="Empty youtube video id found please specifiy youtube id"></lightning-card>
+    </template>
+</template>
